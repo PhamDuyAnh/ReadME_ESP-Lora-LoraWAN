@@ -4,7 +4,6 @@
 
 *  IoTThinks - https://github.com/PhamDuyAnh/ESP-Lora-Gateway-by-IoTThinks
 *  IoTThinks - https://github.com/PhamDuyAnh/ESP-Lora-Gateway_v2.1-by-IoTThinks
-*  sparkfun - https://github.com/PhamDuyAnh/ESP-Lora-Gateway-1CH-by-sparkfun
 
 # ESP Lora Node
 
@@ -16,3 +15,4 @@
   
 # ESP LoraWAN Node
 *  HelTecAutomation - https://github.com/PhamDuyAnh/ESP-LoRaWAN-Node-by-HelTecAutomation
+*  sparkfun - https://github.com/PhamDuyAnh/ESP-LoraWAN-Node-1CH-by-sparkfun
