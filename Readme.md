@@ -34,3 +34,4 @@
 
 ## Frequency AS923-925 ("AS2") VN
 *  https://github.com/TheThingsArchive/ttn/issues/491
+*  https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/#as923-925-as2
