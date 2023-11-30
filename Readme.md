@@ -31,3 +31,6 @@
 *  https://www.instructables.com/How-to-Program-ESP32-As-LoRa-Gateway-With-Arduino/
 *  https://electronicsinnovation.com/diy-lorawan-gateway-with-rfm95-wemos-d1-mini-pro-how-to-make-single-channel-lora-gateway/
 *  https://github.com/PaulStoffregen/RadioHead/blob/master/RHDatagram.cpp
+
+## Frequency AS923-925 ("AS2") VN
+*  https://github.com/TheThingsArchive/ttn/issues/491
