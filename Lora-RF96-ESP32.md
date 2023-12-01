@@ -4,6 +4,8 @@
 *  https://www.thethingsnetwork.org/forum/t/lora-radio-node-v1-hope-rf96-setup-for-ttn/54944
 *  https://microchip.ua/wireless/RF96_97_98.pdf
 
+![](https://github.com/PhamDuyAnh/ReadME_ESP-Lora-LoraWAN/blob/main/REF/HopeRF%20RFM95.jpg)
+
 ### MCU ESP32-PICO-D4
 *  ESP32 contains two low-power Xtensa® 32-bit LX6 microprocessors. The internal memory includes:
 ```
