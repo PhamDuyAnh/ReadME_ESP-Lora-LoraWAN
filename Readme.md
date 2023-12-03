@@ -55,3 +55,6 @@ vector freqs[] = {
   //{ 0, 0, 0, 0, 923200000, 125, 10, 10 }             // Channel 10, 923.2 - SF10BW125 (RX2)
 };
 ```
+
+## TTN MAC & PHY version --> 1.0.2???
+https://huongdan.cytrontech.vn/sending-data-from-node-to-the-things-stack.html
