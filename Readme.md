@@ -57,4 +57,5 @@ vector freqs[] = {
 ```
 
 ## TTN MAC & PHY version --> 1.0.2???
+AS_923_2 TTN support LoRaWAN version --> LoRaWAN Specification 1.0.4
 https://huongdan.cytrontech.vn/sending-data-from-node-to-the-things-stack.html
