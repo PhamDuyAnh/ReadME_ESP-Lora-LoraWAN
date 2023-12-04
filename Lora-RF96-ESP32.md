@@ -47,3 +47,79 @@ https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf
 #define LORA_DIO2             34 // Mini
 #define LORA_RESET            27 // Mini
 ```
+## Javascript Uplink decoder
+https://thingsboard.cloud/integrationsCenter/converters
+
+```
+// Decode an uplink message from a buffer
+// payload - array of bytes
+// metadata - key/value object
+
+/** Decoder **/
+
+// decode payload to string
+var payloadStr = decodeToString(payload);
+
+// decode payload to JSON
+var data = decodeToJson(payload);
+
+var deviceName = 'rf210_11';
+var deviceType = 'CKD_test_device';
+var customerName = 'RFThings RF210';
+var groupName = 'test devices';
+var manufacturer = 'Titops';
+// use assetName and assetType instead of deviceName and deviceType
+// to automatically create assets instead of devices.
+// var assetName = 'Asset A';
+// var assetType = 'building';
+
+// Result object with device/asset attributes/telemetry data
+var result = {
+    // Use deviceName and deviceType or assetName and assetType, but not both.
+    deviceName: deviceName,
+    deviceType: deviceType,
+    // assetName: assetName,
+    // assetType: assetType,
+    // customerName: customerName,
+    groupName: groupName,
+    attributes: {
+        model: 'RF210',
+        serialNumber: 'RF210-11',
+        integrationName: metadata['integrationName'],
+        manufacturer: manufacturer
+    },
+    telemetry: {
+        rawData: payloadStr,
+        EUI: data.EUI,
+        data: hex2a(data.data),
+        freq: data.freq,
+        dr: data.dr,
+        port:data.port,
+        ts: data.ts
+    }
+};
+
+/** Helper functions **/
+function hex2a(hexx) {
+    var hex = hexx.toString();//force conversion
+    var str = '';
+    for (var i = 0; i < hex.length; i += 2)
+        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+    return str;
+}
+
+function decodeToString(payload) {
+    return String.fromCharCode.apply(String, payload);
+}
+
+function decodeToJson(payload) {
+    // covert payload to string.
+    var str = decodeToString(payload);
+
+    // parse string to JSON
+    var data = JSON.parse(str);
+    return data;
+}
+
+return result;
+```
