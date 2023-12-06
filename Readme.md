@@ -60,3 +60,36 @@ vector freqs[] = {
 AS_923_2 TTN support LoRaWAN version --> LoRaWAN Specification 1.0.4
 
 https://huongdan.cytrontech.vn/sending-data-from-node-to-the-things-stack.html
+
+## TTN not support 1CH gateway
+[https://learn.sparkfun.com/...](https://learn.sparkfun.com/tutorials/sparkfun-lora-gateway-1-channel-hookup-guide/all)
+```
+Heads up! Warning - TTN v.3 does not support single channel gateways like this one on account of them causing network issues for other multi channel gateways; "crippling" some might say. This is because as they are not, necessarily, LoRaWAN-compliant. They are, however, a great way to begin exploring the world of LoRa. Most of the hookup guide references using The Things Network to which TTN requests a LoRaWAN gateway with a minimum of 8 channel support. At this time, SparkFun is working on a revision of the tutuorial, but we can only recommend using this product as an ESP32 development board.
+```
+
+[https://www.thethingsnetwork.org/...](https://www.thethingsnetwork.org/forum/t/single-channel-packet-forwarders-scpf-are-obsolete-and-not-supported/31117)
+```
+Single channel packet forwarders are obsolete and are not supported
+Single Channel in this article refers to both Single Channel and Dual Channel devices (and any variations thereof).
+
+Single Channel Packet Forwarders are not LoRaWAN compliant gateways.
+
+They negatively impact proper operation of gateways and end devices (nodes) in their area which means they negatively impact The Things Network and its users, but they also impact other LoRaWAN operators. Not only now, but also in the future when new nodes and new gateways are added in the area.
+
+Single Channel Packet Forwarders are often called Single Channel Gateways which is incorrect, confusing and misleading. They shall not be called gateways.
+
+Be aware that some vendors will try to sell Single Channel Packet Forwarders as a gateway which they are not. These cannot be used as gateway for The Things Network.
+
+NOT supported also means that Single Channel Packet Forwarders may no longer work after the community network will be migrated to V3.
+
+Only LoRaWAN compliant gateways are supported by The Things Network.
+
+History
+Years ago in the early days of The Things Network, LoRaWAN gateways were very expensive and out of reach for many. In those days a Single Channel Packet Forwarder was an affordable alternative to start experimenting with the technology and The Things Network.
+
+During recent years much cheaper and much more affordable gateways have become available. The Things Indoor Gateway costs around €85 (VAT included) and there are many options for both DIY and commercial gateways in the price range from €120 to €200. There is even an outdoor gateway for around €160.
+
+In the last years many gateways have been deployed worldwide and network coverage has become available in many areas on the globe. The effect and importance of the negative impact of Single Channel Packet Forwarders on successful operation of the network and its users has substantially increased with the growth of the network.
+
+Therefore Single Channel Packet Forwarders are now deprecated, their use is condemned by The Things Network and they are no longer supported on The Things Network Forum.
+```
