@@ -93,3 +93,17 @@ In the last years many gateways have been deployed worldwide and network coverag
 
 Therefore Single Channel Packet Forwarders are now deprecated, their use is condemned by The Things Network and they are no longer supported on The Things Network Forum.
 ```
+
+## Single Channel Gateways ---> downlink
+```
+https://www.thethingsnetwork.org/forum/t/virtual-and-real-sensors-on-1ch-gateway-esp/21008/6
+
+Single Channel gateways are LoRa devices that receive and transmit only on one channel and at one speed. This means that they will only receive a fraction (mostly 10% or so) of all LoRa messages that are transmitted in their area. However, they might come in useful in areas with less dense traffic or for private networks where we want to provide a service for only a limited set of well-known devices.
+
+Single channel gateways have no downlink functions, so it is not possible for applications to send messages (back) to a device. However, and more important, they cannot forward Join Accept messages as well. This means that single channel gateways can only be used with ABP addressing. Also, cost of a single channel gateway is very much lower than a full-blown LoRa Gateway.
+
+At the moment the TTN staging environment will accept data coming from Single Channel Gateways, and it will schedule downlink travel over these Gateways as well (which will never arrive at its destination). This means that a 1-ch gateway will seriously disrupt OTAA functions in areas where bot fullgateways and 1-ch gateways are present.
+
+In future releases of the TTN it is expected that they will still accept messages in staging environment (for testing) but recognizing that the device is a single channel gateway it will not send any downlink traffic to that gateway. Whether the production environment of TTN in the future will still handle 1-channel gateways remains to be seen; TTN likes to provide service to full gateways and likes to get rid of single channel gateways for obvious reasons. On the other hand, nothing keeps people from building their own LoRa-like environment with single channel gateways. As the 433MHz and 868MHz bands are free to use for everybody (provided you do not use more than 1% air time), the networks have to cope with other traffic on these frequencies in some way.
+
+```
